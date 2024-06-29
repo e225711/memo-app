@@ -1,29 +1,7 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { Redirect } from 'expo-router';
 
-import Header from '../components/Header';
-import MemoListItem from '../components/MemoListItem';
-import CircleButtun from '../components/CircleButton';
-
-const Index = (): JSX.Element => {
-    return (
-        <View style={styles.container}>
-            <Header />
-            <View>
-                <MemoListItem />
-                <MemoListItem />
-                <MemoListItem />
-            </View>
-            <CircleButtun>+</CircleButtun>
-        </View>
-    )
+const Index = (): JSX.Element=> {
+    return <Redirect href="auth/log_in" />
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1, //画面いっぱいに広げる
-        backgroundColor: '#fff',
-    }
-})
-
 export default Index;
- 
